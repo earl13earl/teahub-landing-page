@@ -47,12 +47,10 @@ app.post("/", (req, res) => {
 	});
 });
 
+app.get("/", (req, res) => {
+	res.render("home", { msg: "The sytem is ready to take your info." });
+});
 
-app.get("/landing",(req,res) => {
-	res.render("landing",{
-		msg : "Enter Username and Password"
-	})
-})
 
 app.post("/landing", (req,res) =>{
 	var username = req.body.username
