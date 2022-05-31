@@ -11,10 +11,10 @@ app.use(express.static("public"));
 app.set("view engine", "ejs");
 
 const conn = mysql.createConnection({
-	host: "localhost",
-	user: "root",
-	password: "earljhon@_13",
-	database: "nodedb",
+	host: "sql6.freesqldatabase.com",
+	user: "sql6496728",
+	password: "QBuPqzlpNB",
+	database: "sql6496728",
 });
 
 conn.connect((err) => {
