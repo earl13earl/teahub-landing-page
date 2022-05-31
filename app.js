@@ -25,9 +25,7 @@ conn.connect((err) => {
 	}
 });
 
-app.get("/", (req, res) => {
-	res.render("home", { msg: "The sytem is ready to take your info." });
-});
+
 
 app.post("/", (req, res) => {
 	var data = {
