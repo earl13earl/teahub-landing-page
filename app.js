@@ -20,11 +20,11 @@ const conn = mysql.createConnection({
 conn.connect((err) => {
 	if (err) {
 		console.log(err);
+		console.log("cant connect");
 	} else {
 		console.log("Database connected");
 	}
 });
-
 
 
 app.post("/", (req, res) => {
@@ -51,6 +51,11 @@ app.get("/", (req, res) => {
 	res.render("home", { msg: "The sytem is ready to take your info." });
 });
 
+app.get("/landing",(req,res) => {
+	res.render("landing",{
+		msg : "Enter Your Credentials"
+	})
+})
 
 app.post("/landing", (req,res) =>{
 	var username = req.body.username
